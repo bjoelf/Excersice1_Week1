@@ -43,6 +43,39 @@ namespace Excersice1_Week1
                         case 9:
                             RunExcerciseNine();
                             break;
+                        case 10:
+                            RunExcerciseTen();
+                            break;
+                        case 11:
+                            RunExcerciseEleven();
+                            break;
+                        case 12:
+                            RunExcerciseTwelve();
+                            break;
+                        case 13:
+                            RunExcerciseThirteen();
+                            break;
+                        case 14:
+                            RunExcerciseFourteen();
+                            break;
+                        case 15:
+                            RunExcerciseFifteen();
+                            break;
+                        case 16:
+                            RunExcerciseSixteen();
+                            break;
+                        case 17:
+                            RunExcerciseSeventeen();
+                            break;
+                        case 18:
+                            RunExcerciseEightteen();
+                            break;
+                        case 19:
+                            RunExcerciseNineteen();
+                            break;
+                        case 20:
+                            RunExcerciseTwenty();
+                            break;
                         case -1:
                             keepAlive = false;
                             break;
@@ -80,6 +113,17 @@ namespace Excersice1_Week1
             Console.WriteLine("Todays date is: " + DateTime.Now.ToShortDateString());
             Console.WriteLine("Tomorrows  date is: " + DateTime.Now.AddDays(1).ToShortDateString());
             Console.WriteLine("Yesterdays date was: " + DateTime.Now.AddDays(-1).ToShortDateString());
+        }
+
+        public static string AskUserFor(string what)
+        {
+            Console.Write($"Please type in {what}: ");
+            return Console.ReadLine();
+        }
+        public static string AskUserFor(int what)
+        {
+            Console.Write($"Please type in {what}: ");
+            return Console.ReadLine();
         }
     }
 }

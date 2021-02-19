@@ -63,7 +63,7 @@ namespace Excersice1_Week1
             double radius = Convert.ToDouble(Console.ReadLine());
             double sqrt = Math.Sqrt(radius);
             Console.WriteLine($"The sqrt is : {sqrt} ");
-            double pow2 = Math.Pow(sqrt,2);
+            double pow2 = Math.Pow(sqrt, 2);
             Console.WriteLine($"The sqrt rasied pow 2 is : {pow2} ");
             double pow10 = Math.Pow(pow2, 10);
             Console.WriteLine($"The sqrt rasied another pow 10  : {pow10} ");
@@ -111,6 +111,22 @@ namespace Excersice1_Week1
                 {
                     Console.WriteLine("No order options are available!");
                 }
+            }
+        }
+        private static void RunExcerciseTen()
+        {
+            Console.Write("Hello dear user, please type in a number");
+            double aNumber = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Dear user, please type in another number");
+            double bNumber = Convert.ToDouble(Console.ReadLine());
+            if (bNumber != 0)
+            {
+                Console.WriteLine($"First number divided by second number is: {aNumber / bNumber}");
+            }
+            else
+            {
+                Console.WriteLine("Error; number entered is equal to zero.");
+                RunExcerciseFour();
             }
         }
     }
