@@ -98,8 +98,12 @@ namespace Excersice1_Week1
                 Console.Clear();
             }
         }
-
-
+        static double AskUserForInput(string what = "a number")
+        {
+            Console.Write($"Ok, hit me with {what}..  ");
+            double ret = Double.Parse(Console.ReadLine());
+            return ret;
+        }
         private static void RunExcerciseOne()
         {
             //Console.WriteLine("You successfullt ran excercise one!");
@@ -114,7 +118,6 @@ namespace Excersice1_Week1
             Console.WriteLine("Tomorrows  date is: " + DateTime.Now.AddDays(1).ToShortDateString());
             Console.WriteLine("Yesterdays date was: " + DateTime.Now.AddDays(-1).ToShortDateString());
         }
-
         public static string AskUserFor(string what)
         {
             Console.Write($"Please type in {what}: ");
