@@ -10,6 +10,11 @@ namespace Excersice1_Week1
         {
             Console.WriteLine("Hello dear user, please type in an integer number, not ZERO" );
             int aInt = Convert.ToInt32(Console.ReadLine());
+            while (aInt == 0)
+            {
+                Console.WriteLine("No not zero, pls try again");
+                aInt--;
+            }
 
             for(int i = 0; i<=aInt; i++)
             {
@@ -37,11 +42,27 @@ namespace Excersice1_Week1
         }
         private static void RunExcerciseTwelve()
         {
-
+            for (int i = 1; i <= 10; i++)
+            {
+                string builder = "";
+                for (int ii = 1; ii <= 10; ii++)
+                {
+                    builder = builder + $"{i * ii} \t";
+                }
+                Console.WriteLine(builder);
+                builder = "";
+            }
         }
         private static void RunExcerciseThirteen()
         {
-            throw new NotImplementedException();
+            //modified ex to make my buddy, the pc to input the numbers...
+
+            for (int i = 1; i <= 100; i++)
+            {
+                var rnd = new Random(i);
+                int rand = rnd.Next(0, 500);
+                Console.WriteLine(rand);
+            }
         }
         private static void RunExcerciseFourteen()
         {
