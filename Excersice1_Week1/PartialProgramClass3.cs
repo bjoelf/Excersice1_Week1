@@ -47,10 +47,9 @@ namespace Excersice1_Week1
                 string builder = "";
                 for (int ii = 1; ii <= 10; ii++)
                 {
-                    builder = builder + $"{i * ii} \t";
+                    builder += $"{i * ii} \t";
                 }
                 Console.WriteLine(builder);
-                builder = "";
             }
         }
         private static void RunExcerciseThirteen()
@@ -60,9 +59,8 @@ namespace Excersice1_Week1
             bool notLucky = true;
             while (notLucky)
             {
-                int guess = 0;
                 Console.WriteLine($"Enter a number between 0 and 500.  ");
-                guess = Convert.ToInt32(Console.ReadLine());
+                int guess = Convert.ToInt32(Console.ReadLine());
                 if (guess == rnd)
                 {
                     Console.Write($"Your guess was {guess} and that was correct!!");
@@ -80,7 +78,29 @@ namespace Excersice1_Week1
         }
         private static void RunExcerciseFourteen()
         {
-            throw new NotImplementedException();
+            ///Write a program that keeps asking the user for input numbers, until he enters -1. 
+            ///Store the amount of numbers the user have entered and the sum of the numbers added together. 
+            ///When the user types -1, the program should display the sum and the average of the numbers.
+
+            double sum = AskUserForInput("Give me a number");
+            int counter = 0;
+
+            bool loopAlive = true;
+            while (loopAlive)
+            {
+                double userInput = Double.Parse(Console.ReadLine());
+                if (userInput == -1)
+                {
+                    Console.WriteLine($"Sum is {sum} and the average is: {sum/counter}. ");
+                    loopAlive = false;
+                }
+                else
+                {
+                    Console.WriteLine($"Sum is (now): {sum}. Give me a negative value (-1) to quit.");
+                    sum += userInput;
+                    counter++;
+                }
+            }
         }
         private static void RunExcerciseFifteen()
         {

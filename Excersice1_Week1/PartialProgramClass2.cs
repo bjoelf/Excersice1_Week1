@@ -21,16 +21,16 @@ namespace Excersice1_Week1
             String ret = str.ToLower();
             ret = ret.Replace("quick", "brown");
             ret = ret.Insert(30, "lazy ");
-            ret = char.ToUpper(ret[0]) + ret.Substring(1);
+            ret = char.ToUpper(ret[0]) + ret[1..];
             Console.WriteLine(ret);
         }
         private static void RunExcerciseFive()
         {
             String str = "Arrays are very common in programming, they look something like: [1,2,3,4,5]";
-            String ret = str.Substring(str.IndexOf('['));
-            ret = ret.Substring(0, 2) + ret.Substring(6);
-            ret = ret.Substring(0, ret.Length - 1);
-            ret = ret + ",6,7,8,9,10]";
+            String ret = str[str.IndexOf('[')..];
+            ret = ret.Substring(0, 2) + ret[6..];
+            ret = ret[0..^1];
+            ret += ",6,7,8,9,10]";
             Console.WriteLine(ret);
         }
         private static void RunExcerciseSix()

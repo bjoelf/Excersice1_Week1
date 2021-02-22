@@ -4,7 +4,7 @@ namespace Excersice1_Week1
 {
     public partial class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             bool keepAlive = true;
             while (keepAlive)
@@ -100,7 +100,7 @@ namespace Excersice1_Week1
         }
         static double AskUserForInput(string what = "a number")
         {
-            Console.Write($"Ok, hit me with {what}..  ");
+            Console.WriteLine($"Ok, hit me with {what}..  ");
             double ret = Double.Parse(Console.ReadLine());
             return ret;
         }
