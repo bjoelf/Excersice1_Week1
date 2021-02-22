@@ -55,13 +55,27 @@ namespace Excersice1_Week1
         }
         private static void RunExcerciseThirteen()
         {
-            //modified ex to make my buddy, the pc to input the numbers...
+            int rnd = new Random().Next(500);
 
-            for (int i = 1; i <= 100; i++)
+            bool notLucky = true;
+            while (notLucky)
             {
-                var rnd = new Random(i);
-                int rand = rnd.Next(0, 500);
-                Console.WriteLine(rand);
+                int guess = 0;
+                Console.WriteLine($"Enter a number between 0 and 500.  ");
+                guess = Convert.ToInt32(Console.ReadLine());
+                if (guess == rnd)
+                {
+                    Console.Write($"Your guess was {guess} and that was correct!!");
+                    notLucky = false;
+                } 
+                else if (guess > rnd)
+                {
+                    Console.Write($"Your guess was too big.");
+                } 
+                else
+                {
+                    Console.Write($"Your guess was too small.");
+                }
             }
         }
         private static void RunExcerciseFourteen()
