@@ -116,7 +116,35 @@ namespace Excersice1_Week1
         }
         private static void RunExcerciseEightteen()
         {
-            throw new NotImplementedException();
+            ///Create a new empty integer array of 10 elements. 
+            ///Loop through the array and assign each element to a new random value.
+            int[] intArray = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                intArray[i] = Convert.ToInt32(new Random().Next(500));
+            }
+
+            ///Create a new empty array of doubles, having the same size as the previous array. 
+            ///Loop through that array and assign the values to 1 divided by the value on the same position of the previous array.
+            ///So if the first array has the value 42 on position 3, the second array should hold the double value 1 / 42.
+            ///
+            double[] dblArray = new double[10];
+            for (int i = 0; i<10; i++)
+            {
+                dblArray[i] = 1/Convert.ToDouble(intArray[i]);
+            }
+
+            ///Finally, loop through both arrays and output the values to the screen using a foreach-loop.
+            ///https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/using-foreach-with-arrays
+            foreach (int i in intArray)
+            {
+                Console.WriteLine($"intArray value is: {i} ");
+            }
+            foreach (double i in dblArray)
+            {
+                Console.WriteLine($"doubleArray value is: {i} ");
+            }
+
         }
         private static void RunExcerciseNineteen()
         {
