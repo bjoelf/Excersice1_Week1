@@ -104,7 +104,20 @@ namespace Excersice1_Week1
         }
         private static void RunExcerciseFifteen()
         {
-            throw new NotImplementedException();
+            ///Write the program code that asks the user for a number. 
+            ///Then display all numbers that the number is divisible by. 
+            ///Example entering 12, should output 6, 4, 3, 2 and 1. 
+            ///Tip: use modulo and a loop
+            Console.Write("Please enter a number: ");
+            int nr = int.Parse(Console.ReadLine());
+
+            for (int i = nr; i>=0; i--)
+            {
+                if (nr % i == 0 & i < nr)
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
         private static void RunExcerciseSixteen()
         {
