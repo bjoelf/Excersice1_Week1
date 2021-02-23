@@ -108,11 +108,60 @@ namespace Excersice1_Week1
         }
         private static void RunExcerciseSixteen()
         {
-            throw new NotImplementedException();
+            /// Write a program that asks the user for a number. 
+            /// Use this number to output the Fibonacci series up until that number. 
+            /// Entering 10 should then output: 0, 1, 1, 2, 3, 5, 8, 13, 21 and 34.
+            Console.Write("Please enter a number: ");
+            int nr = int.Parse(Console.ReadLine());
+
+            int fib = 0;
+            int newFib = 1;
+            int lastFib = 0;
+            for (int i = 0; i < nr; i++)
+            {
+                Console.WriteLine(lastFib);
+                lastFib = newFib + fib;
+                fib = newFib;
+                newFib = lastFib;
+            }
         }
         private static void RunExcerciseSeventeen()
         {
-            throw new NotImplementedException();
+            ///Let the user input a string, then check if the string is a palindrome sentence.
+            ///A palindrome is a word or sentence that reads the same in both directions. 
+            ///Example of palindrome sentences are Loops at a spool, wet stew and level. 
+            ///However, the spaces might look different depending on which direction you read it, 
+            ///so these should be excluded in your calculations, and a tip is to use some string manipulation to remove them.
+
+            do {
+                Console.Write("Enter a word to check: ");
+                string input = Console.ReadLine();
+                input = input.Replace(" ", "").Trim();
+                int test = (input.Length % 2 + 1);
+                bool pal = true;
+
+                for (int i = 0; i < test; i++)
+                {
+                    char fromStart = input[i];
+                    char fromEnd = input[input.Length - (i + 1)];
+                    if (fromStart != fromEnd)
+                    {
+                        Console.WriteLine(fromStart + " " + fromEnd);
+                        pal = false;
+                        break;
+                    }
+                    Console.WriteLine(fromStart + " " + fromEnd);
+                }
+
+                if (pal)
+                {
+                    Console.WriteLine($" {input} is a palindrome");
+                }
+                else
+                {
+                    Console.WriteLine($" {input} is a palindrome");
+                }
+            } while (true);
         }
         private static void RunExcerciseEightteen()
         {
@@ -123,11 +172,9 @@ namespace Excersice1_Week1
             {
                 intArray[i] = Convert.ToInt32(new Random().Next(500));
             }
-
             ///Create a new empty array of doubles, having the same size as the previous array. 
             ///Loop through that array and assign the values to 1 divided by the value on the same position of the previous array.
             ///So if the first array has the value 42 on position 3, the second array should hold the double value 1 / 42.
-            ///
             double[] dblArray = new double[10];
             for (int i = 0; i<10; i++)
             {
@@ -140,9 +187,9 @@ namespace Excersice1_Week1
             {
                 Console.WriteLine($"intArray value is: {i} ");
             }
-            foreach (double i in dblArray)
+            foreach (double d in dblArray)
             {
-                Console.WriteLine($"doubleArray value is: {i} ");
+                Console.WriteLine($"doubleArray value is: {d} ");
             }
 
         }
